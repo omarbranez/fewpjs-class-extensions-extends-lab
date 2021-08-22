@@ -42,7 +42,11 @@ class Square extends Polygon {
     }
 
     get area() {
-        return this.sidesArray[0] ** 2
+        if (this.isValid) {
+            return this.sidesArray[0] ** 2
+        } else {
+            return "Invalid Square"
+        }
     }
     
 }
